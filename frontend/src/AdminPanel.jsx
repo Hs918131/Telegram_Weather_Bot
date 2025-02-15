@@ -5,7 +5,9 @@ import axios from "axios";
 import { auth, provider, signInWithPopup, signOut } from "./firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 
+
 const AdminPanel = () => {
+  const api = process.env.VITE_API_URL;
   const [users, setUsers] = useState([]);
   const [settings, setSettings] = useState({
     weatherApiKey: "",
@@ -32,7 +34,7 @@ const AdminPanel = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/users");
+      const response = await axios.get(`${api}/users`);
       setUsers(response.data);
     } catch (err) {
       setError("Failed to fetch users");
@@ -41,7 +43,7 @@ const AdminPanel = () => {
 
   const fetchSettings = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/admin/settings");
+      const response = await axios.get(`${api}/admin/settings`);
       if (response.data) {
         setSettings({
           weatherApiKey: response.data.weatherApiKey || "",
@@ -55,7 +57,7 @@ const AdminPanel = () => {
 
   const handleSaveSettings = async () => {
     try {
-      await axios.put("http://localhost:3000/admin/settings", settings);
+      await axios.put(`${api}/admin/settings`, settings);
       setSuccessMessage("Settings updated successfully!");
       setTimeout(() => setSuccessMessage(""), 3000);
     } catch (err) {
@@ -88,7 +90,7 @@ const AdminPanel = () => {
 
   const handleUserAction = async (chatId, action) => {
     try {
-      await axios.post(`http://localhost:3000/admin/users/${chatId}/${action}`);
+      await axios.post(`${api}/admin/users/${chatId}/${action}`);
       fetchUsers();
       setSuccessMessage(`User ${action}ed successfully`);
       setTimeout(() => setSuccessMessage(""), 3000);
