@@ -1,0 +1,36 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Subscriber {
+  id        Int      @id @default(autoincrement())
+  chatId    BigInt    @unique
+  name      String?
+  email     String?   @unique
+  location  String
+  isActive  Boolean  @default(true)
+  isAdmin   Boolean  @default(false)
+  subscribedAt DateTime @default(now())
+  createdAt DateTime @default(now())
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  chatId    Int      @unique
+  email     String   @unique
+  name      String
+  role      String   @default("admin") // Can be "admin" or "superadmin"
+  createdAt DateTime @default(now())
+}
+
+model BotSettings {
+  id        Int      @id @default(autoincrement())
+  weatherApiKey  String
+  telegramBotToken String
+  createdAt DateTime @default(now())
+}
