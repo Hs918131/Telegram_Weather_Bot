@@ -24,7 +24,7 @@ A full-stack application featuring a Telegram bot that provides weather updates 
 # 🏗️ Technology Stack
 
 ## Backend
-- **NestJS** - TypeScript-based Node.js framework
+- **NodeJS** - TypeScript-based Node.js framework
 - **Prisma ORM** - Database management and migrations
 - **PostgreSQL** - Primary database
 - **nestjs-telegraf** - Telegram bot integration
@@ -74,38 +74,38 @@ telegram-weather-bot/
 ### 1. Clone the repository
 bash
 
-git clone <https://github.com/Hs918131/Telegram_Weather_Bot>
+`git clone <https://github.com/Hs918131/Telegram_Weather_Bot>`
 
-cd telegram-weather-bot
+`cd telegram-weather-bot`
 
 ### 2. Backend Setup
 bash
 
-cd backend
+`cd backend`
 
-npm install
+`npm install`
 
 #### Create .env file
 
-  cp .env.example .env
+`cp .env.example .env`
 
 #### Update database schema
-npx prisma generate
+`npx prisma generate`
 
-npx prisma db push
+`npx prisma db push`
 
 #### Start the server
-npm run start:dev
+`npm run start:dev`
 
 
 ### 3. Frontend Setup
 bash
 
-cd frontend
+`cd frontend`
 
-npm install
+`npm install`
 
-npm start
+`npm start`
 
 ## Environment Variables
 
@@ -113,33 +113,33 @@ Create .env files in both backend and frontend directories:
 
 **Backend (.env)**
 env
-- DATABASE_URL="postgresql://user:password@localhost:5432/telegram_bot"
+- `DATABASE_URL="postgresql://user:password@localhost:5432/telegram_bot"`
 
-- PORT=3000
+- `PORT=3000`
 
-- TELEGRAM_BOT_TOKEN="your_bot_token"
+- `TELEGRAM_BOT_TOKEN="your_bot_token"`
 
-- WEATHER_API_KEY="your_weather_api_key"
+- `WEATHER_API_KEY="your_weather_api_key"`
 
-- GOOGLE_CLIENT_ID="your_google_client_id"
+- `GOOGLE_CLIENT_ID="your_google_client_id"`
 
-- GOOGLE_CLIENT_SECRET="your_google_client_secret"
+- `GOOGLE_CLIENT_SECRET="your_google_client_secret"`
 
-- JWT_SECRET="your_jwt_secret"
+- `JWT_SECRET="your_jwt_secret"`
 
 **Frontend (.env)**
 env
-- VITE_FIREBASE_API_KEY=your_api_key
+- `VITE_FIREBASE_API_KEY=your_api_key`
 
-- VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+- `VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com`
 
-- VITE_FIREBASE_PROJECT_ID=your_project_id
+- `VITE_FIREBASE_PROJECT_ID=your_project_id`
 
-- VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+- `VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com`
 
-- VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+- `VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id`
 
-- VITE_FIREBASE_APP_ID=your_app_id
+- `VITE_FIREBASE_APP_ID=your_app_id`
 
 
 # 🤖 Bot Commands
@@ -166,23 +166,23 @@ env
 ## Database Migrations
 bash
 ## Generate migration
-npx prisma migrate dev --name migration_name
+`npx prisma migrate dev --name migration_name`
 
 ## Apply migrations
-npx prisma migrate deploy
+`npx prisma migrate deploy`
 
 
 ## Running Tests
 bash
 ## Backend tests
-cd backend
+`cd backend`
 
-npm run test
+`npm run test`
 
 ## Frontend tests
-cd frontend
+`cd frontend`
 
-npm test
+`npm test`
 
 # 📝 Contributing
 
