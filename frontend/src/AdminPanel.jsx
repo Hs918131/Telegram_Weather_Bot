@@ -7,7 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 
 const AdminPanel = () => {
-  const api = process.env.VITE_API_URL;
+  const api = import.meta.env.VITE_API_URL;
   const [users, setUsers] = useState([]);
   const [settings, setSettings] = useState({
     weatherApiKey: "",
