@@ -2,6 +2,9 @@
 
 A full-stack application featuring a Telegram bot that provides weather updates and an administrative panel for user management. Built with NestJS, React, and PostgreSQL.
 
+#### Live_LINK = [https://telegram-weather-bot-1-e9yo.onrender.com/](https://telegram-weather-bot-1-e9yo.onrender.com/)
+#### Bot_Link = [https://t.me/hs918131_ast_bot](https://t.me/hs918131_ast_bot)
+
 # 🌟 Features
 
 ## Telegram Bot
