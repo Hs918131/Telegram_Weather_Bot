@@ -4,6 +4,7 @@ A full-stack application featuring a Telegram bot that provides weather updates 
 
 #### Admin_Panel = [https://telegram-weather-bot-1-e9yo.onrender.com/](https://telegram-weather-bot-1-e9yo.onrender.com/)
 #### Bot_Link = [https://t.me/hs918131_ast_bot](https://t.me/hs918131_ast_bot)
+##### Please wait for few mintute after opening the Admin Panel, data will take some time to load
 
 #### I have used [Tomorrow.io Weather API](https://www.tomorrow.io/weather-api/) 
 
